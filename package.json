@@ -1,7 +1,7 @@
 {
-  "name": "workplace",
+  "name": "Init_Workplace",
   "version": "4.0.0",
-  "description": "My workplace folder",
+  "description": "Template frontend",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
