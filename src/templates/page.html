@@ -1,0 +1,20 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{# variable example #}
+	<h1>{{title}}</h1>
+
+	
+	{# partial example #}
+	{% include "partials/_header.html" %}
+
+	{# data usage example #}
+	{% include "data/data.html" %}
+	<h2>Hello</h2>		
+	{# end of example #}
+
+{% endblock %}
