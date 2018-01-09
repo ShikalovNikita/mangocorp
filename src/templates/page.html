@@ -4,17 +4,102 @@ title: Index page
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	{# variable example #}
-	<h1>{{title}}</h1>
-
-	
-	{# partial example #}
-	{% include "partials/_header.html" %}
-
-	{# data usage example #}
-	{% include "data/data.html" %}
-	<h2>Hello</h2>		
-	{# end of example #}
+	<!-- begin page__body -->
+	<div class="page__body">
+		<!-- begin persona -->
+		<div class="persona">
+			<div class="persona__center">
+				<!-- begin persona__head -->
+				<div class="persona__head">
+					<!-- begin persona__logo -->
+					<div class="logo">
+						<img src="http://www.thevista.ru/files/images/articles/ANOTHER/mango.png" alt="">
+					</div>
+					<!-- end persona__logo -->
+					<!-- begin persona__title -->
+					<div class="persona__title">
+						Вход в личный кабинет
+					</div>
+					<!-- end persona__title -->
+				</div>
+				<!-- end persona__head -->
+				<!-- begin persona__screen -->
+				<div class="persona__screen">
+					<!-- begin persona__content -->
+					<div class="persona__content">
+						<!-- begin persona__loginForm -->
+						<div class="persona__loginForm loginForm">
+							<!-- begin loginForm__center -->
+							<div class="loginForm__center">
+								<!-- begin formRow -->
+								<div class="formRow loginForm__row">
+									<!-- begin loginForm__login field -->
+									<div class="loginForm__login field">
+										<!-- begin loginForm__label -->
+										<div class="loginForm__label">
+											Логин
+										</div>
+										<!-- end loginForm__label -->
+										<!-- begin loginForm__input -->
+										<div style="width: 282px" class="loginForm__input input input_height_big input_type_login">
+											<!-- begin input__inner -->
+											<div class="input__inner">
+												<input type="text" name="login" class="input__input" tabindex="1">
+											</div>
+											<!-- end input__inner -->
+										</div>
+										<!-- end loginForm__input -->
+									</div>
+									<!-- end loginForm__login field -->
+								</div>
+								<!-- end formRow -->
+								<!-- begin formRow -->
+								<div class="formRow loginForm__row">
+									<!-- begin loginForm__password field -->
+									<div class="loginForm__password field">
+										<!-- begin loginForm__label -->
+										<div class="loginForm__label">
+											Пароль
+											<a href="#" class="link loginForm__forgot">Забыли пароль?</a>
+										</div>
+										<!-- end loginForm__label -->
+										<!-- begin loginForm__input -->
+										<div style="width: 205px" class="loginForm__input input input_height_big input_type_password">
+											<!-- begin input__inner -->
+											<div class="input__inner">
+												<input type="text" name="password" class="input__input" tabindex="2">
+												<input class="input__hiddenInput input__input">
+												<div class="input__capsLockLabel">CapsLock</div>
+												<div class="input__showPass">
+													<div class="input__showPassIcon"></div>
+												</div>
+											</div>
+											<!-- end input__inner -->
+										</div>
+										<!-- end loginForm__input -->
+									</div>
+									<!-- end loginForm__password field -->
+								</div>
+								<!-- end formRow -->
+							</div>
+							<!-- end loginForm__center -->
+							<!-- begin loginForm__center -->
+							<div class="loginForm__center">
+								<div style="width: 296px" class="loginForm__submit button button_size_big button_width_elastic button_color_mango button_disabled_no">
+									<input type="submit" class="button__input" value="Войти">
+								</div>
+							</div>
+							<!-- end loginForm__center -->
+						</div>
+						<!-- end persona__loginForm -->
+					</div>
+					<!-- end persona__content -->
+				</div>
+				<!-- end persona__screen -->
+			</div>
+		</div>
+		<!-- end persona -->
+	</div>
+	<!-- end page__body -->
 
 {% endblock %}

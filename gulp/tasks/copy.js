@@ -28,7 +28,11 @@ gulp.task('copy:img', function(){
 		.pipe(gulp.dest(config.dest.img));
 });
 
-gulp.task('copy', ['copy:img','copy:fonts']);
+gulp.task('copy:fontawesome', function(){
+	return gulp.src('node_modules/font-awesome/fonts/*.{ttf,eot,woff,woff2}')
+	.pipe(gulp.dest(config.dest.fonts));
+})
+gulp.task('copy', ['copy:img','copy:fonts', 'copy:fontawesome']);
 gulp.task('copy:watch', function() {
 	gulp.watch(config.src.img+'/*', ['copy']);
 })

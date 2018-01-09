@@ -1,2 +1,164 @@
-.block
-	display: flex
+*
+	padding: 0
+	margin: 0
+body
+	background: #e6e6e6
+	color: #404040
+	font-family: Segoe UI, Arial, sans-serif
+	font-size: 14px
+	margin: 0px
+	padding: 0px
+	position: relative
+	min-height: 100%
+	height: auto!important
+	height: 100%
+	-webkit-font-smoothing: antialiased
+
+	.persona
+		text-align: center
+		padding: 0 0 15px
+
+		&__center
+			display: inline-block
+			margin: 0 auto
+			text-align: left
+			width: 760px
+
+		&__head
+			padding: 30px 38px
+			text-align: center
+			.logo
+				img
+					height: 140px
+		&__title
+			color: #686868
+			font-size: 16px
+		&__screen
+			display: inline-block
+			width: 100%
+			min-width: 500px
+			box-shadow: 0 1px 4px rgba(0,0,0,.2)
+		&__content
+			background: #fff
+		&__loginForm
+			padding: 15px 0
+.loginForm
+	&__center
+		width: 296px
+		margin: 0 auto
+	.formRow
+		min-height: 40px
+	&__row
+		padding: 10px 0
+	&__label
+		position: relative
+		margin-bottom: 5px
+		color: #828282
+		.link:visited
+			color: #2263b8
+		.link, .link:visited
+			color: #3072c4
+			cursor: pointer
+			outline: none
+			outline: 0
+			text-decoration: none
+			&:hover
+				color: #348cf7
+	&__forgot
+		position: absolute
+		right: 0
+		top: 0
+	&__submit
+		text-align: center
+		margin: 15px 0
+		&.button_disabled_yes
+			.button__input
+				color: grey
+				background: #fff
+		&.button_disabled_no.button_color_mango
+			.button__input
+				color: white
+				border: none
+				background: #dd6411
+	.field
+		.input
+			cursor: text
+			display: inline-block
+			position: relative
+			padding-right: 10px
+			width: 160px
+			vertical-align: 0
+			border-collapse: separate
+			&_height_big
+				padding-right: 12px
+				.input__input
+					padding: 3px 6px 7px 7px
+					height: 24px
+					font-size: 16px
+				.input__showPass
+					bottom: 11px
+			&__showPass
+				width: 15px
+				height: 16px
+				position: absolute
+				right: 9px
+				bottom: 8px
+				cursor: pointer
+				user-select: none
+			&__showPassIcon
+				@extend .fa;
+				@extend .fa-eye;
+				font-size: 15px
+			&__capsLockLabel
+				display: none
+				position: absolute
+				right: 32px
+				bottom: 10px
+				font-size: 9px
+				cursor: default
+				background: #999
+				padding: 2px 5px
+				color: #fff
+				border-radius: 3px
+			&__inner, &__input
+				width: 100%
+			&__input
+				font-family: Segoe UI, Arial, sans-serif
+				margin: 0
+				border: 1px solid #cbcbcb
+				border-top-color: #a6a6a6
+				font-size: 14px
+				line-height: 21px
+				height: 28px
+				padding 0 6px
+				border-radius: 1px
+				box-shadow: 0 1px 3px 0 rgba(0,0,0,.1) inset, 0 0 0 1px transparent
+				transition: box-shadow ease .3s, border ease .3s
+			&_type_password
+				padding-right: 40px
+				width: 255px !important
+				.input__input
+					padding-right: 32px
+			&__hiddenInput
+				display: none
+.button
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	cursor: default
+	user-select: none
+	height: 30px
+	line-height: 30px
+	&_size_big
+		height: 36px
+		line-height: 36px
+	&_width_elastic
+		width: 100%
+	&__input
+		width: 100%
+		height: 100%
+		padding: 0
+		vertical-align: top
+		cursor: pointer
+		border: 1px solid #ccc
+		border-radius: 3px
