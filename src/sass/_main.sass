@@ -13,35 +13,104 @@ body
 	height: auto!important
 	height: 100%
 	-webkit-font-smoothing: antialiased
+.wrapper
+	width: 960px
+	margin: 30px auto
+	&__screen
+		display: inline-block
+		width: 100%
+		min-width: 500px
+		box-shadow: 0 1px 4px rgba(0,0,0,.2)
+	&__content
+		background: #fff
+		position: relative
+		min-height: 400px
+.persona
+	text-align: center
+	padding: 0 0 15px
 
-	.persona
+	&__center
+		display: inline-block
+		margin: 0 auto
+		text-align: left
+		width: 760px
+
+	&__head
+		padding: 30px 38px
 		text-align: center
-		padding: 0 0 15px
-
-		&__center
-			display: inline-block
-			margin: 0 auto
-			text-align: left
-			width: 760px
-
-		&__head
-			padding: 30px 38px
-			text-align: center
-			.logo
-				img
-					height: 140px
-		&__title
-			color: #686868
+		.logo
+			img
+				height: 140px
+		&.font_big
 			font-size: 16px
-		&__screen
+		&.font_left
+			text-align: left
+	&__title
+		color: #686868
+		font-size: 16px
+	&__screen
+		display: inline-block
+		width: 100%
+		min-width: 500px
+		box-shadow: 0 1px 4px rgba(0,0,0,.2)
+	&__content
+		background: #fff
+	&__loginForm
+		padding: 15px 0
+.information
+	padding: 0 15px
+	&__head
+		position: relative
+		height: 76px;
+		.title
+			line-height: 76px
+		.title, .balance
 			display: inline-block
-			width: 100%
-			min-width: 500px
-			box-shadow: 0 1px 4px rgba(0,0,0,.2)
-		&__content
+		.balance
+			position: absolute
+			top: 15px
+			right: 0
+			font-size: 18px
+			font-weight: bold
+			span
+				font-weight: 400
+			&__pay
+				&-link
+					color: #3072c4
+					cursor: pointer
+					outline: none
+					outline: 0
+					text-decoration: none
+					display: block
+					&:hover
+						color: #348cf7
+						background: #eaeaea
+	&__tableBlock
+		background: #e4e4e4
+		.title
+			color: #dd6411
+			font-weight: 500
 			background: #fff
-		&__loginForm
-			padding: 15px 0
+			padding: 20px 0 10px 0
+		table
+			border: none
+			border-spacing: 0px
+			width: 100%
+			tr
+				&:nth-child(odd)
+					background: #e4e4e4
+				&:nth-child(even)
+					background: #fff
+				td
+					padding: 5px 10px
+				th
+					background: #e77c11
+					text-align: left
+					padding: 5px 10px
+					color: #fff
+	&__copyrights
+		text-align: center
+		padding: 20px 0
 .loginForm
 	&__center
 		width: 296px
@@ -64,10 +133,23 @@ body
 			text-decoration: none
 			&:hover
 				color: #348cf7
-	&__forgot
+	&__forgot, &__logout
 		position: absolute
 		right: 0
 		top: 0
+	&__logout
+		font-size: 15px
+		&-link
+			color: #3072c4
+			cursor: pointer
+			outline: none
+			outline: 0
+			text-decoration: none
+			display: block
+			padding: 30px 15px 30px 15px
+			&:hover
+				color: #348cf7
+				background: #eaeaea
 	&__submit
 		text-align: center
 		margin: 15px 0
@@ -80,6 +162,12 @@ body
 				color: white
 				border: none
 				background: #dd6411
+	&__result
+		background: #ff000080
+		padding: 8px 10px
+		border: 1px solid #f00
+		color: #fff
+		display: none;
 	.field
 		.input
 			cursor: text
@@ -107,7 +195,10 @@ body
 				user-select: none
 			&__showPassIcon
 				@extend .fa;
-				@extend .fa-eye;
+				&.slash
+					@extend .fa-eye-slash;
+				&.no-slash
+					@extend .fa-eye;
 				font-size: 15px
 			&__capsLockLabel
 				display: none
